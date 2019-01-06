@@ -1,0 +1,18 @@
+
+// #questions {
+//   width: 500px;
+// }
+table {
+  border: 1px solid gray;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+  th, td {
+    border: 1px solid gray;
+  }
+  th {
+    width: 30px;
+  }
+  .question {
+    width: 500px;
+  }
+}

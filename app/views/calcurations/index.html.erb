@@ -1,0 +1,78 @@
+<p>Fill in your scores</p>
+<p>0=don't like 1=like 2=love</p>
+
+<div id="questions">
+  <table v-for="question in questions" v-bind:key="question.q1">
+    <tr><th>1</th><td class="question">{{ question.q1 }}</td>
+      <td> <input type="number" v-on:input="question.score1 = $event.target.value" v-bind:value="question.score1" min="0"></td></tr>
+    <tr><th>2</th><td class="question">{{ question.q2 }}</td>
+      <td> <input type="number" v-on:input="question.score2 = $event.target.value" v-bind:value="question.score2" min="0"></td></tr>
+    <tr><th>3</th><td class="question">{{ question.q3 }}</td>
+      <td> <input type="number" v-on:input="question.score3 = $event.target.value" v-bind:value="question.score3" min="0"></td></tr>
+    <tr><th>4</th><td class="question">{{ question.q4 }}</td>
+      <td> <input type="number" v-on:input="question.score4 = $event.target.value" v-bind:value="question.score4" min="0"></td></tr>
+    <tr><th>5</th><td class="question">{{ question.q5 }}</td>
+      <td> <input type="number" v-on:input="question.score5 = $event.target.value" v-bind:value="question.score5" min="0"></td></tr>
+  </table>
+</div>
+
+
+<script>
+  var questions = [
+      //Rタイプ
+      {
+        q1: "機械や道具を使って作業すること", score1: 1,
+        q2: "ガーデニングや植物を育てること", score2: 0,
+        q3: "動物の世話や訓練をすること", score3: 0,
+        q4: "身体を鍛えたり、動かしたりして活動すること", score4: 0,
+        q5: "手や指などを使って作業すること", score5: 0,
+      },
+      // Iタイプ
+      {
+        q1: "抽象的な思考をすること", score1: 0,
+        q2: "ひとつの理論や考え方を発展させること", score2: 0,
+        q3: "歴史背景や時代の特性について考えること", score3: 0,
+        q4: "クロスワードやジグゾーパズルなどを解くこと", score4: 0,
+        q5: "困難な局面や問題に挑戦し、解決策を探ること", score5: 0,
+      },
+      // Aタイプ
+      {
+        q1: "リジナルなものやユニークな考えを創りだすこと", score1: 0,
+        q2: "様々な状況やシーンなどを想像すること", score2: 0,
+        q3: "文章や映像、画像、立体、身体の動き、音声などで表現すること", score3: 0,
+        q4: "美術品や映画、パフォーマンスや演奏等を簡素腐すること", score4: 0,
+        q5: "曖昧なことや不確かなものに向き合うこと", score5: 0
+      },
+      // Sタイプ
+      {
+        q1: "他人や社会のために役立つこと", score1: 0,
+        q2: "新しい友達や知り合いを作ること", score2: 0,
+        q3: "子供と遊んだり、成長の手助けを行うこと", score3: 0,
+        q4: "チームや仲間と良い関係を築いたり、支えたりすること", score4: 0,
+        q5: "さまざまな人の特性や役割などを理解すること", score5: 0,
+      },
+      // Eタイプ
+      {
+        q1: "自分の意見を他人に伝え、従ってもらうこと", score1: 0,
+        q2: "チームのメンバーのそれぞれの役割を決めること", score2: 0,
+        q3: "挑戦したり、目標に向けた意思決定を行うこと", score3: 0,
+        q4: "政治や経済の仕組み、動向に注目すること", score4: 0,
+        q5: "著名な人や第一人者と言われる人と知り合いになること", score5: 0,
+      },
+      // Cタイプ
+      {
+        q1: "マニュアルや指示に従って物事を進めること", score1: 0,
+        q2: "正確さや精密さを求められる作業やプロセス", score2: 0,
+        q3: "何をどのようにやればいいのかが明確なこと", score3: 0,
+        q4: "作業内容や手順の変化がほとんどないこと", score4: 0,
+        q5: "ものやデータを集めること", score5: 0,
+      }
+    ]
+
+  new Vue({
+    el: "#questions",
+    data: {
+      questions: questions
+    }
+  })
+</script>
