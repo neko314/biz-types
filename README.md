@@ -1,4 +1,4 @@
-# Whats's tyeps
+# What's biz-tyeps
 
 Easy checker my types, based on the Holland Codes.
 
